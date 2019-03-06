@@ -5,7 +5,7 @@ using namespace std;
 
 int main ()
 {
-    int N = 0;
+    int N = 5;
     int m[N];
     int i;
     int a;
@@ -13,23 +13,24 @@ int main ()
     cout << "Введите искомое число: ";
     cin >> a;
 
-    cout << "Введите длину последовательности: ";
-    cin >> N;
-
     cout << "Введите последовательность целых чисел: ";
-    cin >> m[N];
+
+    for (i = 0; i < N; i++) {
+        cin >> m[i];
+    }
 
     for (i = 0; i < N; i++) {
         if (m[i]!=0) {
-            if (a ==m[i]) {
+            if (m[i] == a) {
                 cout << "Найдено: " << a << endl;
-            } else {
-                cout << "Не найдено" << endl;
+                return 0;
             }
         } else {
             break;
         }
     }
+
+    cout << "Не найдено" << endl;
 
     return 0;
 }
