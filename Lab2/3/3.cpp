@@ -10,6 +10,7 @@ int main()
     int m[a];
     int sum = 0;
 
+    cout << "Введите значения последовательности: ";
     for (i = 0; i < a; i++) {
         cin >> m[i];
     }
@@ -22,6 +23,6 @@ int main()
         } else {
             break;
         }
-    cout << sum;
+    cout << "Сумма положительных членов целочисленной последовательноти = " << sum << endl;
     return 0;
 }
