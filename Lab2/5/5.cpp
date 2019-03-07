@@ -18,14 +18,14 @@ int main()
         if (m[i]!=0) {
             for (b = 2; b!=m[i]; b++) {
                 if (m[i] % b == 0) {
-                    cout << "Не простое: \n" << m[i] << endl;
-                    return 0;
+                    cout << "Не простое: " << m[i] << endl;
+                    return b;
                 }
             }
-            cout << "Простое: \n" << m[i] << endl;
+            cout << "Простое: " << m[i] << endl;
+        } else {
+            break;
         }
-        cout << "Простое: \n" << m[i] << endl;
-
     }
     return 0;
 }
