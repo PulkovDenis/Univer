@@ -16,10 +16,10 @@ int main()
         cin >> m[i];
 
         if (m[i]!=0) {
-            for (b = 2; b!=m[i]; b++) {
+            for (b = 2; b*b <= m[i]; b++) {
                 if (m[i] % b == 0) {
                     cout << "Не простое: " << m[i] << endl;
-                    return b;
+                    return 0;
                 }
             }
             cout << "Простое: " << m[i] << endl;
