@@ -18,7 +18,7 @@ int main()
     }
     for( i = 0; i < a; i++) {
         if (m[i]!=0) {
-            for (b = 2; b <= m[i]; b++) {
+            for (b = 2; b <= abs(m[i]); b++) {
                 if (m[i] % b == 0) {
                     n++;
                 }
