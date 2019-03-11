@@ -23,10 +23,7 @@ int main()
                     n++;
                 }
             }
-            if (n > 1) {
-                cout << "Не простое: " << m[i] << endl;
-                n = 0;
-            } else {
+            if (n < 2) {
                 cout << "Простое: " << m[i] << endl;
                 n = 0;
             }
