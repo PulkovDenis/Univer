@@ -1,36 +1,29 @@
-#include <stdio.h>
 #include <iostream>
 
 using namespace std;
 
 int main ()
 {
-    int N = 5;
-    int m[N];
-    int i;
-    int a;
+    int a = 0;
+    int b;
+    int k;
 
     cout << "Введите искомое число: ";
-    cin >> a;
 
-    cout << "Введите последовательность целых чисел: ";
-
-    for (i = 0; i < N; i++) {
-        cin >> m[i];
-    }
-
-    for (i = 0; i < N; i++) {
-        if (m[i]!=0) {
-            if (m[i] == a) {
-                cout << "Найдено: " << a << endl;
+    cin >> k;
+    if (k != 0) {
+        for (a = 0; ; a++) {
+            cout << "Введите значение последовательности: ";
+            cin >> b;
+            if (b != 0 && b == k) {
+                cout << "Найдено" << endl;
                 return 0;
+            } else if (b == 0) {
+                break;
             }
-        } else {
-            break;
         }
+        cout << "Не найдено" << endl;
+        return 0;
+
     }
-
-    cout << "Не найдено" << endl;
-
-    return 0;
 }
