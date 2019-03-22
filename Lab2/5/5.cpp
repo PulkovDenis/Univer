@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <iostream>
 
 using namespace std;
@@ -6,25 +5,21 @@ using namespace std;
 int main()
 
 {
-    int a = 5;
-    int m[a];
-    int i;
     int b;
+    int k;
     int n = 0;
 
-    cout << "Введите последовательность чисел: ";
-    for( i = 0; i < a; i++) {
-        cin >> m[i];
-    }
-    for( i = 0; i < a; i++) {
-        if (m[i]!=0) {
-            for (b = 2; b <= abs(m[i]); b++) {
-                if (m[i] % b == 0) {
+    for( int a; a != 0; a++) {
+        cout << "Введите последовательность чисел: ";
+        cin >> k;
+        if (k != 0) {
+            for (b = 2; b <= k; b++) {
+                if (k % b == 0) {
                     n++;
                 }
             }
             if (n < 2) {
-                cout << "Простое: " << m[i] << endl;
+                cout << "Простое: " << k << endl;
                 n = 0;
             }
         }  else {
