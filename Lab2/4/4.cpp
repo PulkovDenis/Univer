@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <iostream>
 
 using namespace std;
@@ -12,7 +11,7 @@ int main()
 
     cout << "Является ли данное число простым?\n";
 
-    for (b = 2; b!=a; b++) {
+    for (b = 2; b < a; b++) {
         if (a % b == 0) {
             cout << "Нет\n" << endl;
             return 0;
