@@ -1,4 +1,5 @@
 #include <iostream>
+#
 
 using namespace std;
 
@@ -9,19 +10,20 @@ int main()
     int k;
     int n = 0;
 
-    for( int a; a != 0; a++) {
-        cout << "Введите последовательность чисел: ";
+    cout << "Введите последовательность чисел: ";
+
+    for(int a = 0; ; a++) {
         cin >> k;
         if (k != 0) {
-            for (b = 2; b <= k; b++) {
+            for (b = 2; b < k; b++) {
                 if (k % b == 0) {
                     n++;
                 }
             }
-            if (n < 2) {
+            if (n < 1) {
                 cout << "Простое: " << k << endl;
-                n = 0;
             }
+            n = 0;
         }  else {
             break;
         }
