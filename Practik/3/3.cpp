@@ -10,6 +10,8 @@ void normirovka(double *massiv, int razmer)
     double max = 0;
     double min = 1;
     double normir;
+    double *m = new double [razmer];
+
     for (int i = 0; i < razmer; i++) {
         random = rand()%1000;
         massiv[i] = random/1000;
@@ -18,10 +20,19 @@ void normirovka(double *massiv, int razmer)
         if (massiv[i] < min)
             min = massiv[i];
     }
+
     for (int i = 0; i < razmer; i++) {
         normir = (massiv[i] - min)/(max - min);
         cout << "Нормированное значение: " << normir << endl;
+        m[i] = normir;
     }
+
+    cout << "Значения массива: [    ";
+    for (int i = 0; i < razmer; i++) {
+        cout << m[i] << "   " ;
+    }
+    cout << "]" << endl;
+    delete[] m;
 }
 
 int main()
